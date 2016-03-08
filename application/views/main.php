@@ -28,9 +28,26 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    
+                    <?php
+                        if($this->session->userdata('is_login')){
+                    ?>
+                    <li>
+                        <a class="page-scroll" href="/index.php/page/logout">Logout</a>
+                    </li>
+                    <?php
+                        }else{
+                    ?>
                     <li>
                         <a class="page-scroll" href="/index.php/page/login">Login</a>
                     </li>
+                    <li>
+                        <a class="page-scroll" href="/index.php/page/register">Sign up</a>
+                    </li>
+                    <?php
+                        }
+                    ?>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -44,7 +61,17 @@
                 <h1>Your Favorite Source of Free Bootstrap Themes</h1>
                 <hr>
                 <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
+                <?php
+                        if($this->session->userdata('is_login')){
+                ?>
+                <a href="/index.php/page/logout" class="btn btn-primary btn-xl page-scroll">Logout</a>
+                <?php
+                        }else{
+                ?>
                 <a href="/index.php/page/login" class="btn btn-primary btn-xl page-scroll">Login</a>
+                <?php
+                        }
+                ?>
             </div>
         </div>
     </header>

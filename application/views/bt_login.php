@@ -5,9 +5,9 @@
   <form class="form-horizontal" action="/index.php/page/authentication" method="post">
       <div class="modal-body">
           <div class="control-group">
-            <label class="control-label" for="inputEmail">ID</label>
+            <label class="control-label" for="inputEmail">Email</label>
             <div class="controls">
-              <input type="text" id="id" name="id" placeholder="id">
+              <input type="text" id="email" name="email" placeholder="email">
             </div>
           </div>
           <div class="control-group">
